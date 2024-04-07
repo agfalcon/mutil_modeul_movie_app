@@ -17,7 +17,7 @@ private val MovieLocalColor = staticCompositionLocalOf { MovieColorSet.RedTheme.
 
 @Composable
 fun MovieAppTheme(
-    movieColorSet: MovieColorSet,
+    movieColorSet: MovieColorSet = MovieColorSet.RedTheme,
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
@@ -44,6 +44,7 @@ fun MovieAppTheme(
         MaterialTheme(
             colorScheme = colors.material,
             typography = Typography,
+            shapes = Shapes,
             content = content
         )
     }
